@@ -75,8 +75,7 @@ Kotlin and Android Studio
 
 ## :white_check_mark: Requirements ##
 
-Interest in Android development
-Kotlin development
-Mac or Windows PC
+Android Studio
+Linux, Mac or Windows
 
 <a href="#top">Back to top</a>
