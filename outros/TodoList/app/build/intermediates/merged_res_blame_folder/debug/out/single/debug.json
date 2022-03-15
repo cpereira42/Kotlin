@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/drawable_ic_search.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/drawable/ic_search.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/menu_menu_fragment_tasks.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/menu/menu_fragment_tasks.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/layout_item_task.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/layout/item_task.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/drawable_ic_check_mark.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/drawable/ic_check_mark.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/layout_fragment_tasks.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/layout/fragment_tasks.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/drawable_ic_sort.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/drawable/ic_sort.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/navigation_nav_graph.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/drawable_ic_add.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/drawable/ic_add.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/layout_fragment_add_edit_task.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/layout/fragment_add_edit_task.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/drawable_ic_priority.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/drawable/ic_priority.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/res/drawable/ic_launcher_background.xml"
+    }
+]
