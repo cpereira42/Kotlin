@@ -21,6 +21,8 @@ MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] /home/cpereira/.gra
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /home/cpereira/.gradle/caches/transforms-3/d3a25327ec3b4c09d577689cbcdfc19e/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /home/cpereira/.gradle/caches/transforms-3/46da6ef1c9d30948789b1acdca9a3d55/transformed/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.datastore:datastore-preferences:1.0.0-alpha02] /home/cpereira/.gradle/caches/transforms-3/3a4db7d699e4d9a8f6831a90bdf7bde3/transformed/jetified-datastore-preferences-1.0.0-alpha02/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.datastore:datastore-core:1.0.0-alpha02] /home/cpereira/.gradle/caches/transforms-3/eff4f1aab6ab8946f1b7abac155e525c/transformed/jetified-datastore-core-1.0.0-alpha02/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.5.0] /home/cpereira/.gradle/caches/transforms-3/08ad2c7cc591ea307a26f1a36930ee45/transformed/material-1.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /home/cpereira/.gradle/caches/transforms-3/ad3e0d1fce72da4ca068b0252c5e1c93/transformed/constraintlayout-2.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] /home/cpereira/.gradle/caches/transforms-3/f93a397594ff4d143943fe800f13ed8c/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
@@ -177,6 +179,10 @@ MERGED from [androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transfo
 MERGED from [androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /home/cpereira/.gradle/caches/transforms-3/46da6ef1c9d30948789b1acdca9a3d55/transformed/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /home/cpereira/.gradle/caches/transforms-3/46da6ef1c9d30948789b1acdca9a3d55/transformed/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0-alpha02] /home/cpereira/.gradle/caches/transforms-3/3a4db7d699e4d9a8f6831a90bdf7bde3/transformed/jetified-datastore-preferences-1.0.0-alpha02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0-alpha02] /home/cpereira/.gradle/caches/transforms-3/3a4db7d699e4d9a8f6831a90bdf7bde3/transformed/jetified-datastore-preferences-1.0.0-alpha02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-core:1.0.0-alpha02] /home/cpereira/.gradle/caches/transforms-3/eff4f1aab6ab8946f1b7abac155e525c/transformed/jetified-datastore-core-1.0.0-alpha02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-core:1.0.0-alpha02] /home/cpereira/.gradle/caches/transforms-3/eff4f1aab6ab8946f1b7abac155e525c/transformed/jetified-datastore-core-1.0.0-alpha02/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.5.0] /home/cpereira/.gradle/caches/transforms-3/08ad2c7cc591ea307a26f1a36930ee45/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.5.0] /home/cpereira/.gradle/caches/transforms-3/08ad2c7cc591ea307a26f1a36930ee45/transformed/material-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] /home/cpereira/.gradle/caches/transforms-3/ad3e0d1fce72da4ca068b0252c5e1c93/transformed/constraintlayout-2.1.3/AndroidManifest.xml:5:5-7:41

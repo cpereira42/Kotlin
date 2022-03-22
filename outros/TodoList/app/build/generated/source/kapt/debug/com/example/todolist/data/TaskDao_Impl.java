@@ -145,10 +145,14 @@ public final class TaskDao_Impl implements TaskDao {
   }
 
   @Override
-  public Flow<List<Task>> getTasks(final String searchQuery) {
-    final String _sql = "SELECT * FROM task_table WHERE name LIKE '%' || ?  || '%' ORDER BY important DESC";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+  public Flow<List<Task>> getTasksSortedByName(final String searchQuery,
+      final boolean hideCompleted) {
+    final String _sql = "SELECT * FROM task_table WHERE (completed != ? OR completed = 0) AND name LIKE '%' || ?  || '%' ORDER BY important DESC, name";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
+    final int _tmp = hideCompleted ? 1 : 0;
+    _statement.bindLong(_argIndex, _tmp);
+    _argIndex = 2;
     if (searchQuery == null) {
       _statement.bindNull(_argIndex);
     } else {
@@ -174,13 +178,13 @@ public final class TaskDao_Impl implements TaskDao {
               _tmpName = _cursor.getString(_cursorIndexOfName);
             }
             final boolean _tmpImportant;
-            final int _tmp;
-            _tmp = _cursor.getInt(_cursorIndexOfImportant);
-            _tmpImportant = _tmp != 0;
-            final boolean _tmpCompleted;
             final int _tmp_1;
-            _tmp_1 = _cursor.getInt(_cursorIndexOfCompleted);
-            _tmpCompleted = _tmp_1 != 0;
+            _tmp_1 = _cursor.getInt(_cursorIndexOfImportant);
+            _tmpImportant = _tmp_1 != 0;
+            final boolean _tmpCompleted;
+            final int _tmp_2;
+            _tmp_2 = _cursor.getInt(_cursorIndexOfCompleted);
+            _tmpCompleted = _tmp_2 != 0;
             final long _tmpCreated;
             _tmpCreated = _cursor.getLong(_cursorIndexOfCreated);
             final int _tmpId;
@@ -199,6 +203,73 @@ public final class TaskDao_Impl implements TaskDao {
         _statement.release();
       }
     });
+  }
+
+  @Override
+  public Flow<List<Task>> getTasksSortedByDateCreated(final String searchQuery,
+      final boolean hideCompleted) {
+    final String _sql = "SELECT * FROM task_table WHERE (completed != ? OR completed = 0) AND name LIKE '%' || ?  || '%' ORDER BY important DESC, created";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
+    int _argIndex = 1;
+    final int _tmp = hideCompleted ? 1 : 0;
+    _statement.bindLong(_argIndex, _tmp);
+    _argIndex = 2;
+    if (searchQuery == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, searchQuery);
+    }
+    return CoroutinesRoom.createFlow(__db, false, new String[]{"task_table"}, new Callable<List<Task>>() {
+      @Override
+      public List<Task> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfImportant = CursorUtil.getColumnIndexOrThrow(_cursor, "important");
+          final int _cursorIndexOfCompleted = CursorUtil.getColumnIndexOrThrow(_cursor, "completed");
+          final int _cursorIndexOfCreated = CursorUtil.getColumnIndexOrThrow(_cursor, "created");
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final List<Task> _result = new ArrayList<Task>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final Task _item;
+            final String _tmpName;
+            if (_cursor.isNull(_cursorIndexOfName)) {
+              _tmpName = null;
+            } else {
+              _tmpName = _cursor.getString(_cursorIndexOfName);
+            }
+            final boolean _tmpImportant;
+            final int _tmp_1;
+            _tmp_1 = _cursor.getInt(_cursorIndexOfImportant);
+            _tmpImportant = _tmp_1 != 0;
+            final boolean _tmpCompleted;
+            final int _tmp_2;
+            _tmp_2 = _cursor.getInt(_cursorIndexOfCompleted);
+            _tmpCompleted = _tmp_2 != 0;
+            final long _tmpCreated;
+            _tmpCreated = _cursor.getLong(_cursorIndexOfCreated);
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            _item = new Task(_tmpName,_tmpImportant,_tmpCompleted,_tmpCreated,_tmpId);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
+  }
+
+  @Override
+  public Flow<List<Task>> getTasks(final String query, final SortOrder sortOrder,
+      final boolean hideCompleted) {
+    return TaskDao.DefaultImpls.getTasks(TaskDao_Impl.this, query, sortOrder, hideCompleted);
   }
 
   public static List<Class<?>> getRequiredConverters() {

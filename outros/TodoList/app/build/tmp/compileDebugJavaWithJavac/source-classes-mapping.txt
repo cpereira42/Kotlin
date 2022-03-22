@@ -2,12 +2,20 @@ com/example/todolist/TodoApplication_GeneratedInjector.java
  com.example.todolist.TodoApplication_GeneratedInjector
 hilt_aggregated_deps/com_example_todolist_ui_tasks_TasksViewModel_HiltModuleModuleDeps.java
  hilt_aggregated_deps.com_example_todolist_ui_tasks_TasksViewModel_HiltModuleModuleDeps
-com/example/todolist/ui/tasks/TasksViewModel_AssistedFactory_Factory.java
- com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory_Factory
+com/example/todolist/data/TaskDao_Impl.java
+ com.example.todolist.data.TaskDao_Impl
+ com.example.todolist.data.TaskDao_Impl$1
+ com.example.todolist.data.TaskDao_Impl$2
+ com.example.todolist.data.TaskDao_Impl$3
+ com.example.todolist.data.TaskDao_Impl$4
+ com.example.todolist.data.TaskDao_Impl$5
+ com.example.todolist.data.TaskDao_Impl$6
+ com.example.todolist.data.TaskDao_Impl$7
+ com.example.todolist.data.TaskDao_Impl$8
 hilt_aggregated_deps/com_example_todolist_ui_MainActivity_GeneratedInjectorModuleDeps.java
  hilt_aggregated_deps.com_example_todolist_ui_MainActivity_GeneratedInjectorModuleDeps
-com/example/todolist/ui/tasks/TasksFragment_GeneratedInjector.java
- com.example.todolist.ui.tasks.TasksFragment_GeneratedInjector
+com/example/todolist/data/TaskDatabase_Callback_Factory.java
+ com.example.todolist.data.TaskDatabase_Callback_Factory
 com/example/todolist/databinding/ItemTaskBinding.java
  com.example.todolist.databinding.ItemTaskBinding
 com/example/todolist/di/AppModule_ProvideDatabaseFactory.java
@@ -20,8 +28,8 @@ hilt_aggregated_deps/com_example_todolist_di_AppModuleModuleDeps.java
  hilt_aggregated_deps.com_example_todolist_di_AppModuleModuleDeps
 com/example/todolist/databinding/FragmentAddEditTaskBinding.java
  com.example.todolist.databinding.FragmentAddEditTaskBinding
-com/example/todolist/ui/tasks/TasksViewModel_AssistedFactory.java
- com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory
+hilt_aggregated_deps/com_example_todolist_TodoApplication_GeneratedInjectorModuleDeps.java
+ hilt_aggregated_deps.com_example_todolist_TodoApplication_GeneratedInjectorModuleDeps
 com/example/todolist/databinding/FragmentTasksBinding.java
  com.example.todolist.databinding.FragmentTasksBinding
 com/example/todolist/data/TaskDatabase_Impl.java
@@ -29,6 +37,22 @@ com/example/todolist/data/TaskDatabase_Impl.java
  com.example.todolist.data.TaskDatabase_Impl$1
 hilt_aggregated_deps/com_example_todolist_ui_tasks_TasksFragment_GeneratedInjectorModuleDeps.java
  hilt_aggregated_deps.com_example_todolist_ui_tasks_TasksFragment_GeneratedInjectorModuleDeps
+com/example/todolist/data/PreferencesManager_Factory.java
+ com.example.todolist.data.PreferencesManager_Factory
+com/example/todolist/ui/Hilt_MainActivity.java
+ com.example.todolist.ui.Hilt_MainActivity
+com/example/todolist/Hilt_TodoApplication.java
+ com.example.todolist.Hilt_TodoApplication
+ com.example.todolist.Hilt_TodoApplication$1
+com/example/todolist/di/AppModule_ProvidesApplicationScopeFactory.java
+ com.example.todolist.di.AppModule_ProvidesApplicationScopeFactory
+ com.example.todolist.di.AppModule_ProvidesApplicationScopeFactory$InstanceHolder
+com/example/todolist/BuildConfig.java
+ com.example.todolist.BuildConfig
+com/example/todolist/databinding/ActivityMainBinding.java
+ com.example.todolist.databinding.ActivityMainBinding
+com/example/todolist/ui/tasks/TasksFragment_GeneratedInjector.java
+ com.example.todolist.ui.tasks.TasksFragment_GeneratedInjector
 com/example/todolist/ui/tasks/TasksViewModel_HiltModule.java
  com.example.todolist.ui.tasks.TasksViewModel_HiltModule
 com/example/todolist/TodoApplication_HiltComponents.java
@@ -52,20 +76,6 @@ com/example/todolist/TodoApplication_HiltComponents.java
  com.example.todolist.TodoApplication_HiltComponents$ViewWithFragmentC
  com.example.todolist.TodoApplication_HiltComponents$ViewWithFragmentC$Builder
  com.example.todolist.TodoApplication_HiltComponents$ViewWithFragmentCBuilderModule
-com/example/todolist/Hilt_TodoApplication.java
- com.example.todolist.Hilt_TodoApplication
- com.example.todolist.Hilt_TodoApplication$1
-com/example/todolist/di/AppModule_ProvidesApplicationScopeFactory.java
- com.example.todolist.di.AppModule_ProvidesApplicationScopeFactory
- com.example.todolist.di.AppModule_ProvidesApplicationScopeFactory$InstanceHolder
-com/example/todolist/BuildConfig.java
- com.example.todolist.BuildConfig
-com/example/todolist/databinding/ActivityMainBinding.java
- com.example.todolist.databinding.ActivityMainBinding
-hilt_aggregated_deps/com_example_todolist_TodoApplication_GeneratedInjectorModuleDeps.java
- hilt_aggregated_deps.com_example_todolist_TodoApplication_GeneratedInjectorModuleDeps
-com/example/todolist/ui/Hilt_MainActivity.java
- com.example.todolist.ui.Hilt_MainActivity
 com/example/todolist/DaggerTodoApplication_HiltComponents_SingletonC.java
  com.example.todolist.DaggerTodoApplication_HiltComponents_SingletonC
  com.example.todolist.DaggerTodoApplication_HiltComponents_SingletonC$1
@@ -84,16 +94,9 @@ com/example/todolist/DaggerTodoApplication_HiltComponents_SingletonC.java
  com.example.todolist.DaggerTodoApplication_HiltComponents_SingletonC$ServiceCBuilder
  com.example.todolist.DaggerTodoApplication_HiltComponents_SingletonC$ServiceCImpl
  com.example.todolist.DaggerTodoApplication_HiltComponents_SingletonC$SwitchingProvider
-com/example/todolist/data/TaskDao_Impl.java
- com.example.todolist.data.TaskDao_Impl
- com.example.todolist.data.TaskDao_Impl$1
- com.example.todolist.data.TaskDao_Impl$2
- com.example.todolist.data.TaskDao_Impl$3
- com.example.todolist.data.TaskDao_Impl$4
- com.example.todolist.data.TaskDao_Impl$5
- com.example.todolist.data.TaskDao_Impl$6
- com.example.todolist.data.TaskDao_Impl$7
+com/example/todolist/ui/tasks/TasksViewModel_AssistedFactory_Factory.java
+ com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory_Factory
 com/example/todolist/ui/tasks/Hilt_TasksFragment.java
  com.example.todolist.ui.tasks.Hilt_TasksFragment
-com/example/todolist/data/TaskDatabase_Callback_Factory.java
- com.example.todolist.data.TaskDatabase_Callback_Factory
+com/example/todolist/ui/tasks/TasksViewModel_AssistedFactory.java
+ com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory

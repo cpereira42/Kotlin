@@ -9,6 +9,7 @@ import androidx.hilt.lifecycle.ViewModelFactoryModules_ActivityModule_ProvideFac
 import androidx.hilt.lifecycle.ViewModelFactoryModules_FragmentModule_ProvideFactoryFactory;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
+import com.example.todolist.data.PreferencesManager;
 import com.example.todolist.data.TaskDao;
 import com.example.todolist.data.TaskDatabase;
 import com.example.todolist.di.AppModule;
@@ -27,6 +28,7 @@ import dagger.hilt.android.internal.builders.ViewComponentBuilder;
 import dagger.hilt.android.internal.builders.ViewWithFragmentComponentBuilder;
 import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideApplicationFactory;
+import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DoubleCheck;
 import dagger.internal.MemoizedSentinel;
 import dagger.internal.Preconditions;
@@ -55,6 +57,10 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
   private volatile Object taskDatabase = new MemoizedSentinel();
 
   private volatile Provider<TaskDao> provideTaskDaoProvider;
+
+  private volatile Object preferencesManager = new MemoizedSentinel();
+
+  private volatile Provider<PreferencesManager> preferencesManagerProvider;
 
   private DaggerTodoApplication_HiltComponents_SingletonC(
       ApplicationContextModule applicationContextModuleParam) {
@@ -117,6 +123,29 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
       provideTaskDaoProvider = (Provider<TaskDao>) local;
     }
     return (Provider<TaskDao>) local;
+  }
+
+  private PreferencesManager getPreferencesManager() {
+    Object local = preferencesManager;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = preferencesManager;
+        if (local instanceof MemoizedSentinel) {
+          local = new PreferencesManager(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+          preferencesManager = DoubleCheck.reentrantCheck(preferencesManager, local);
+        }
+      }
+    }
+    return (PreferencesManager) local;
+  }
+
+  private Provider<PreferencesManager> getPreferencesManagerProvider() {
+    Object local = preferencesManagerProvider;
+    if (local == null) {
+      local = new SwitchingProvider<>(2);
+      preferencesManagerProvider = (Provider<PreferencesManager>) local;
+    }
+    return (Provider<PreferencesManager>) local;
   }
 
   @Override
@@ -202,7 +231,7 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
       }
 
       private TasksViewModel_AssistedFactory getTasksViewModel_AssistedFactory() {
-        return TasksViewModel_AssistedFactory_Factory.newInstance(DaggerTodoApplication_HiltComponents_SingletonC.this.getTaskDaoProvider());
+        return TasksViewModel_AssistedFactory_Factory.newInstance(DaggerTodoApplication_HiltComponents_SingletonC.this.getTaskDaoProvider(), DaggerTodoApplication_HiltComponents_SingletonC.this.getPreferencesManagerProvider());
       }
 
       private Provider<TasksViewModel_AssistedFactory> getTasksViewModel_AssistedFactoryProvider() {
@@ -387,6 +416,9 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
 
         case 1: // com.example.todolist.data.TaskDatabase 
         return (T) DaggerTodoApplication_HiltComponents_SingletonC.this.getTaskDatabase();
+
+        case 2: // com.example.todolist.data.PreferencesManager 
+        return (T) DaggerTodoApplication_HiltComponents_SingletonC.this.getPreferencesManager();
 
         default: throw new AssertionError(id);
       }

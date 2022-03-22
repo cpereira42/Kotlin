@@ -65,6 +65,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
     //implementation "android.arch.lifecycle:common-java8:$lifecycleVersion"
+
+
+    implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
 }
 kapt {
     correctErrorTypes true
