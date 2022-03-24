@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
+ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
 MERGED from [androidx.databinding:viewbinding:7.0.4] /home/cpereira/.gradle/caches/transforms-3/a8b1fad24034570a8b89df4f4cde7540/transformed/jetified-viewbinding-7.0.4/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.room:room-ktx:2.4.2] /home/cpereira/.gradle/caches/transforms-3/503292f55ac199b77c36c9ba885bfa40/transformed/jetified-room-ktx-2.4.2/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.4.1] /home/cpereira/.gradle/caches/transforms-3/bcf252f6668d1b1118f49092902d5849/transformed/navigation-fragment-ktx-2.4.1/AndroidManifest.xml:17:1-24:12
@@ -72,25 +72,25 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/c
 MERGED from [androidx.print:print:1.0.0] /home/cpereira/.gradle/caches/transforms-3/7a3f526942bda04a04d73e22f0c58a4a/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/cpereira/.gradle/caches/transforms-3/922ade1f226621f662a76e0f0c3eec21/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.28.3] /home/cpereira/.gradle/caches/transforms-3/4b6140c77548ee39bedf002dc3a47aac/transformed/jetified-dagger-lint-aar-2.28.3/AndroidManifest.xml:16:1-19:12
-INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml
 		INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml
-		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
 		INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml
-		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-24:12
+		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:1-25:12
 		INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:5:5-22:19
+ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:5:5-23:19
 MERGED from [androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.android.material:material:1.5.0] /home/cpereira/.gradle/caches/transforms-3/08ad2c7cc591ea307a26f1a36930ee45/transformed/material-1.5.0/AndroidManifest.xml:22:5-20
@@ -126,21 +126,23 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/cpereira/.gradle/cach
 	android:name
 		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:6:9-40
 activity#com.example.todolist.ui.MainActivity
-ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:13:9-21:20
+ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:13:9-22:20
+	android:windowSoftInputMode
+		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:15:13-55
 	android:exported
-		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:15:13-36
+		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:16:13-36
 	android:name
 		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:14:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:17:17-69
+ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:20:27-74
 uses-sdk
 INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml

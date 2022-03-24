@@ -3,6 +3,10 @@ package com.example.todolist;
 import androidx.hilt.lifecycle.ViewModelFactoryModules;
 import com.example.todolist.di.AppModule;
 import com.example.todolist.ui.MainActivity_GeneratedInjector;
+import com.example.todolist.ui.addedittask.AddEditTaskFragment_GeneratedInjector;
+import com.example.todolist.ui.addedittask.AddEditTaskViewModel_HiltModule;
+import com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedDialogFragment_GeneratedInjector;
+import com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedViewModel_HiltModule;
 import com.example.todolist.ui.tasks.TasksFragment_GeneratedInjector;
 import com.example.todolist.ui.tasks.TasksViewModel_HiltModule;
 import dagger.Binds;
@@ -128,6 +132,8 @@ public final class TodoApplication_HiltComponents {
 
   @Subcomponent(
       modules = {
+          AddEditTaskViewModel_HiltModule.class,
+          DeleteAllCompletedViewModel_HiltModule.class,
           TasksViewModel_HiltModule.class,
           ActivityCBuilderModule.class
       }
@@ -165,7 +171,9 @@ public final class TodoApplication_HiltComponents {
       }
   )
   @FragmentScoped
-  public abstract static class FragmentC implements TasksFragment_GeneratedInjector,
+  public abstract static class FragmentC implements AddEditTaskFragment_GeneratedInjector,
+      DeleteAllCompletedDialogFragment_GeneratedInjector,
+      TasksFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,

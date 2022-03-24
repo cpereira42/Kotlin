@@ -7,8 +7,10 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +18,7 @@ import com.example.todolist.R
 import com.example.todolist.data.SortOrder
 import com.example.todolist.data.Task
 import com.example.todolist.databinding.FragmentTasksBinding
+import com.example.todolist.util.exhaustive
 import com.example.todolist.util.onQueryTextChanged
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -56,21 +59,51 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
                 }
 
             }).attachToRecyclerView(recyclerViewTasks)
+            fabAddTask.setOnClickListener {
+                viewModel.onAddNewTaskClick()
+            }
         }
+        setFragmentResultListener(requestKey = "add_edit_request"){_,bundle ->
+            val result =  bundle.getInt("add_edit_result")
+            viewModel.onAddEditResult(result)
+
+        }
+
          viewModel.tasks.observe(viewLifecycleOwner) {
              taskAdapter.submitList(it)
          }
 
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
-            viewModel.taskEvent.collect { event ->
+            viewModel.tasksEvent.collect {event ->
                 when(event) {
-                    is TasksViewModel.TaskEvent.ShowUndoDeleteTaskMessage -> {
+                    is TasksViewModel.TasksEvent.ShowUndoDeleteTaskMessage -> {
                         Snackbar.make(requireView(),"Task deleted", Snackbar.LENGTH_LONG)
                             .setAction("UNDO") {
                                 viewModel.onUndoDeleteClick(event.task)
                             }.show()
                     }
-                }
+                    is TasksViewModel.TasksEvent.NavigateToAddTaskScreen -> {
+                        val action = TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment2(
+                            task = null,
+                            title = "New Task"
+                        )
+                        findNavController().navigate(action)
+                    }
+                    is TasksViewModel.TasksEvent.NavigateToEditTaskScreen -> {
+                        val action = TasksFragmentDirections.actionTasksFragmentToAddEditTaskFragment2(
+                            task = event.task,
+                            title = "Edit Task")
+                        findNavController().navigate(action)
+                    }
+                    is TasksViewModel.TasksEvent.showTaskSavedConfirmationMessage -> {
+                        Snackbar.make(requireView(), event.msg, Snackbar.LENGTH_SHORT).show()
+
+                    }
+                    TasksViewModel.TasksEvent.NavigateToDeleteAllCompletedScreen -> {
+                        val action = TasksFragmentDirections.actionGlobalDeleteAllCompletedDialogFragment()
+                        findNavController().navigate(action)
+                    }
+                }.exhaustive
             }
         }
 
@@ -111,6 +144,7 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
                 true
             }
             R.id.action_deleted_all_completed_tasks -> {
+                viewModel.onDeleteAllCompletedClick()
                 true
             }
             else -> super.onOptionsItemSelected(item)

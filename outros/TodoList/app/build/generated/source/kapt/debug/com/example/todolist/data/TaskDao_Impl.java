@@ -6,6 +6,7 @@ import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -34,6 +35,8 @@ public final class TaskDao_Impl implements TaskDao {
   private final EntityDeletionOrUpdateAdapter<Task> __deletionAdapterOfTask;
 
   private final EntityDeletionOrUpdateAdapter<Task> __updateAdapterOfTask;
+
+  private final SharedSQLiteStatement __preparedStmtOfDeleteCompletedTasks;
 
   public TaskDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -91,6 +94,13 @@ public final class TaskDao_Impl implements TaskDao {
         stmt.bindLong(6, value.getId());
       }
     };
+    this.__preparedStmtOfDeleteCompletedTasks = new SharedSQLiteStatement(__db) {
+      @Override
+      public String createQuery() {
+        final String _query = "DELETE FROM task_table WHERE completed = 1";
+        return _query;
+      }
+    };
   }
 
   @Override
@@ -139,6 +149,25 @@ public final class TaskDao_Impl implements TaskDao {
           return Unit.INSTANCE;
         } finally {
           __db.endTransaction();
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object deleteCompletedTasks(final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfDeleteCompletedTasks.acquire();
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfDeleteCompletedTasks.release(_stmt);
         }
       }
     }, continuation);

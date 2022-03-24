@@ -1,1 +1,1 @@
-[{"navFile":"src/main/res/navigation/nav_graph.xml","javaFiles":[]}]
+[{"navFile":"src/main/res/navigation/nav_graph.xml","javaFiles":["com.example.todolist.NavGraphDirections","com.example.todolist.ui.tasks.TasksFragmentDirections","com.example.todolist.ui.addedittask.AddEditTaskFragmentDirections","com.example.todolist.ui.addedittask.AddEditTaskFragmentArgs","com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedDialogFragmentDirections"]}]

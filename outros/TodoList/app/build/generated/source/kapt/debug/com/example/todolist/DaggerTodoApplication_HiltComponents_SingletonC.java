@@ -17,6 +17,12 @@ import com.example.todolist.di.AppModule_ProvideDatabaseFactory;
 import com.example.todolist.di.AppModule_ProvideTaskDaoFactory;
 import com.example.todolist.di.AppModule_ProvidesApplicationScopeFactory;
 import com.example.todolist.ui.MainActivity;
+import com.example.todolist.ui.addedittask.AddEditTaskFragment;
+import com.example.todolist.ui.addedittask.AddEditTaskViewModel_AssistedFactory;
+import com.example.todolist.ui.addedittask.AddEditTaskViewModel_AssistedFactory_Factory;
+import com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedDialogFragment;
+import com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedViewModel_AssistedFactory;
+import com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedViewModel_AssistedFactory_Factory;
 import com.example.todolist.ui.tasks.TasksFragment;
 import com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory;
 import com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory_Factory;
@@ -30,6 +36,7 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideApplicationFactory;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.MemoizedSentinel;
 import dagger.internal.Preconditions;
 import java.util.Collections;
@@ -57,6 +64,8 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
   private volatile Object taskDatabase = new MemoizedSentinel();
 
   private volatile Provider<TaskDao> provideTaskDaoProvider;
+
+  private volatile Provider<CoroutineScope> providesApplicationScopeProvider;
 
   private volatile Object preferencesManager = new MemoizedSentinel();
 
@@ -125,6 +134,15 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
     return (Provider<TaskDao>) local;
   }
 
+  private Provider<CoroutineScope> getApplicationScopeCoroutineScopeProvider() {
+    Object local = providesApplicationScopeProvider;
+    if (local == null) {
+      local = new SwitchingProvider<>(2);
+      providesApplicationScopeProvider = (Provider<CoroutineScope>) local;
+    }
+    return (Provider<CoroutineScope>) local;
+  }
+
   private PreferencesManager getPreferencesManager() {
     Object local = preferencesManager;
     if (local instanceof MemoizedSentinel) {
@@ -142,7 +160,7 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
   private Provider<PreferencesManager> getPreferencesManagerProvider() {
     Object local = preferencesManagerProvider;
     if (local == null) {
-      local = new SwitchingProvider<>(2);
+      local = new SwitchingProvider<>(3);
       preferencesManagerProvider = (Provider<PreferencesManager>) local;
     }
     return (Provider<PreferencesManager>) local;
@@ -224,10 +242,43 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
     private final class ActivityCImpl extends TodoApplication_HiltComponents.ActivityC {
       private final Activity activity;
 
+      private volatile Provider<AddEditTaskViewModel_AssistedFactory> addEditTaskViewModel_AssistedFactoryProvider;
+
+      private volatile Provider<DeleteAllCompletedViewModel_AssistedFactory> deleteAllCompletedViewModel_AssistedFactoryProvider;
+
       private volatile Provider<TasksViewModel_AssistedFactory> tasksViewModel_AssistedFactoryProvider;
 
       private ActivityCImpl(Activity activityParam) {
         this.activity = activityParam;
+      }
+
+      private AddEditTaskViewModel_AssistedFactory getAddEditTaskViewModel_AssistedFactory() {
+        return AddEditTaskViewModel_AssistedFactory_Factory.newInstance(DaggerTodoApplication_HiltComponents_SingletonC.this.getTaskDaoProvider());
+      }
+
+      private Provider<AddEditTaskViewModel_AssistedFactory> getAddEditTaskViewModel_AssistedFactoryProvider(
+          ) {
+        Object local = addEditTaskViewModel_AssistedFactoryProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(0);
+          addEditTaskViewModel_AssistedFactoryProvider = (Provider<AddEditTaskViewModel_AssistedFactory>) local;
+        }
+        return (Provider<AddEditTaskViewModel_AssistedFactory>) local;
+      }
+
+      private DeleteAllCompletedViewModel_AssistedFactory getDeleteAllCompletedViewModel_AssistedFactory(
+          ) {
+        return DeleteAllCompletedViewModel_AssistedFactory_Factory.newInstance(DaggerTodoApplication_HiltComponents_SingletonC.this.getTaskDaoProvider(), DaggerTodoApplication_HiltComponents_SingletonC.this.getApplicationScopeCoroutineScopeProvider());
+      }
+
+      private Provider<DeleteAllCompletedViewModel_AssistedFactory> getDeleteAllCompletedViewModel_AssistedFactoryProvider(
+          ) {
+        Object local = deleteAllCompletedViewModel_AssistedFactoryProvider;
+        if (local == null) {
+          local = new SwitchingProvider<>(1);
+          deleteAllCompletedViewModel_AssistedFactoryProvider = (Provider<DeleteAllCompletedViewModel_AssistedFactory>) local;
+        }
+        return (Provider<DeleteAllCompletedViewModel_AssistedFactory>) local;
       }
 
       private TasksViewModel_AssistedFactory getTasksViewModel_AssistedFactory() {
@@ -237,7 +288,7 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
       private Provider<TasksViewModel_AssistedFactory> getTasksViewModel_AssistedFactoryProvider() {
         Object local = tasksViewModel_AssistedFactoryProvider;
         if (local == null) {
-          local = new SwitchingProvider<>(0);
+          local = new SwitchingProvider<>(2);
           tasksViewModel_AssistedFactoryProvider = (Provider<TasksViewModel_AssistedFactory>) local;
         }
         return (Provider<TasksViewModel_AssistedFactory>) local;
@@ -245,7 +296,7 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
 
       private Map<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>> getMapOfStringAndProviderOfViewModelAssistedFactoryOf(
           ) {
-        return Collections.<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>>singletonMap("com.example.todolist.ui.tasks.TasksViewModel", (Provider) getTasksViewModel_AssistedFactoryProvider());
+        return MapBuilder.<String, Provider<ViewModelAssistedFactory<? extends ViewModel>>>newMapBuilder(3).put("com.example.todolist.ui.addedittask.AddEditTaskViewModel", (Provider) getAddEditTaskViewModel_AssistedFactoryProvider()).put("com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedViewModel", (Provider) getDeleteAllCompletedViewModel_AssistedFactoryProvider()).put("com.example.todolist.ui.tasks.TasksViewModel", (Provider) getTasksViewModel_AssistedFactoryProvider()).build();
       }
 
       private ViewModelProvider.Factory getProvideFactory() {
@@ -296,6 +347,15 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
 
         private ViewModelProvider.Factory getProvideFactory() {
           return ViewModelFactoryModules_FragmentModule_ProvideFactoryFactory.provideFactory(fragment, ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerTodoApplication_HiltComponents_SingletonC.this.applicationContextModule), ActivityCImpl.this.getMapOfStringAndProviderOfViewModelAssistedFactoryOf());
+        }
+
+        @Override
+        public void injectAddEditTaskFragment(AddEditTaskFragment addEditTaskFragment) {
+        }
+
+        @Override
+        public void injectDeleteAllCompletedDialogFragment(
+            DeleteAllCompletedDialogFragment deleteAllCompletedDialogFragment) {
         }
 
         @Override
@@ -368,7 +428,13 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
         @Override
         public T get() {
           switch (id) {
-            case 0: // com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory 
+            case 0: // com.example.todolist.ui.addedittask.AddEditTaskViewModel_AssistedFactory 
+            return (T) ActivityCImpl.this.getAddEditTaskViewModel_AssistedFactory();
+
+            case 1: // com.example.todolist.ui.deleteallcompleted.DeleteAllCompletedViewModel_AssistedFactory 
+            return (T) ActivityCImpl.this.getDeleteAllCompletedViewModel_AssistedFactory();
+
+            case 2: // com.example.todolist.ui.tasks.TasksViewModel_AssistedFactory 
             return (T) ActivityCImpl.this.getTasksViewModel_AssistedFactory();
 
             default: throw new AssertionError(id);
@@ -417,7 +483,10 @@ public final class DaggerTodoApplication_HiltComponents_SingletonC extends TodoA
         case 1: // com.example.todolist.data.TaskDatabase 
         return (T) DaggerTodoApplication_HiltComponents_SingletonC.this.getTaskDatabase();
 
-        case 2: // com.example.todolist.data.PreferencesManager 
+        case 2: // @com.example.todolist.di.ApplicationScope kotlinx.coroutines.CoroutineScope 
+        return (T) DaggerTodoApplication_HiltComponents_SingletonC.this.getApplicationScopeCoroutineScope();
+
+        case 3: // com.example.todolist.data.PreferencesManager 
         return (T) DaggerTodoApplication_HiltComponents_SingletonC.this.getPreferencesManager();
 
         default: throw new AssertionError(id);

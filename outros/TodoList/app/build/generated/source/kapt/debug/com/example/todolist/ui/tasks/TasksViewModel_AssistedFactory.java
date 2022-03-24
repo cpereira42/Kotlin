@@ -26,6 +26,6 @@ public final class TasksViewModel_AssistedFactory implements ViewModelAssistedFa
   @Override
   @NonNull
   public TasksViewModel create(SavedStateHandle arg0) {
-    return new TasksViewModel(taskDao.get(), preferencesManager.get());
+    return new TasksViewModel(taskDao.get(), preferencesManager.get(), arg0);
   }
 }

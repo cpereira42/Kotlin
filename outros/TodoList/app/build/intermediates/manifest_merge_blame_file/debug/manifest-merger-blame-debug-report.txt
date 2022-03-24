@@ -11,7 +11,7 @@
 9-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:5:5-22:19
+11-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:5:5-23:19
 12        android:name="com.example.todolist.TodoApplication"
 12-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:6:9-40
 13        android:allowBackup="true"
@@ -32,66 +32,68 @@
 22        android:theme="@style/Theme.ToDoList" >
 22-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:12:9-46
 23        <activity
-23-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:13:9-21:20
+23-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:13:9-22:20
 24            android:name="com.example.todolist.ui.MainActivity"
 24-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:14:13-44
-25            android:exported="true" >
-25-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:15:13-36
-26            <intent-filter>
-26-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:16:13-20:29
-27                <action android:name="android.intent.action.MAIN" />
-27-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:17:17-69
-27-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:17:25-66
-28
-29                <category android:name="android.intent.category.LAUNCHER" />
-29-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:19:17-77
-29-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:19:27-74
-30            </intent-filter>
-31        </activity>
-32
-33        <uses-library
-33-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
-34            android:name="androidx.window.extensions"
-34-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
-35            android:required="false" />
-35-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
-36        <uses-library
-36-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
-37            android:name="androidx.window.sidecar"
-37-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
-38            android:required="false" />
-38-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
-39
-40        <service
-40-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
-41            android:name="androidx.room.MultiInstanceInvalidationService"
-41-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
-42            android:directBootAware="true"
-42-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
-43            android:exported="false" />
-43-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
-44
-45        <provider
-45-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-46            android:name="androidx.startup.InitializationProvider"
-46-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-47            android:authorities="com.example.todolist.androidx-startup"
-47-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-48            android:exported="false" >
-48-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-49            <meta-data
-49-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-50                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-50-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-51                android:value="androidx.startup" />
-51-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-52            <meta-data
-52-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/cpereira/.gradle/caches/transforms-3/dabc9d466217df71bbcee437d16b75d9/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-53                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-53-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/cpereira/.gradle/caches/transforms-3/dabc9d466217df71bbcee437d16b75d9/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-54                android:value="androidx.startup" />
-54-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/cpereira/.gradle/caches/transforms-3/dabc9d466217df71bbcee437d16b75d9/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-55        </provider>
-56    </application>
-57
-58</manifest>
+25            android:exported="true"
+25-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:16:13-36
+26            android:windowSoftInputMode="adjustResize" >
+26-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:15:13-55
+27            <intent-filter>
+27-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:17:13-21:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:18:17-69
+28-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:18:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:20:17-77
+30-->/home/cpereira/AndroidStudioProjects/Kotlin/outros/TodoList/app/src/main/AndroidManifest.xml:20:27-74
+31            </intent-filter>
+32        </activity>
+33
+34        <uses-library
+34-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+35            android:name="androidx.window.extensions"
+35-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+36            android:required="false" />
+36-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+37        <uses-library
+37-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+38            android:name="androidx.window.sidecar"
+38-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+39            android:required="false" />
+39-->[androidx.window:window:1.0.0] /home/cpereira/.gradle/caches/transforms-3/5744b23b2acf8fc14d39f9d511be8335/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+40
+41        <service
+41-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
+42            android:name="androidx.room.MultiInstanceInvalidationService"
+42-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
+43            android:directBootAware="true"
+43-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
+44            android:exported="false" />
+44-->[androidx.room:room-runtime:2.4.2] /home/cpereira/.gradle/caches/transforms-3/e908af790a093ef0276fe87830ba4fbc/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
+45
+46        <provider
+46-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+47            android:name="androidx.startup.InitializationProvider"
+47-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+48            android:authorities="com.example.todolist.androidx-startup"
+48-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+49            android:exported="false" >
+49-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+50            <meta-data
+50-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+51-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+52                android:value="androidx.startup" />
+52-->[androidx.emoji2:emoji2:1.0.0] /home/cpereira/.gradle/caches/transforms-3/8dee6973b39ede0173c4ca413d139bbf/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+53            <meta-data
+53-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/cpereira/.gradle/caches/transforms-3/dabc9d466217df71bbcee437d16b75d9/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+54-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/cpereira/.gradle/caches/transforms-3/dabc9d466217df71bbcee437d16b75d9/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+55                android:value="androidx.startup" />
+55-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/cpereira/.gradle/caches/transforms-3/dabc9d466217df71bbcee437d16b75d9/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+56        </provider>
+57    </application>
+58
+59</manifest>

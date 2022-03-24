@@ -2619,6 +2619,7 @@ id action_container
 id action_context_bar
 id action_deleted_all_completed_tasks
 id action_divider
+id action_global_deleteAllCompletedDialogFragment
 id action_hide_completed_tasks
 id action_image
 id action_menu_divider
@@ -2629,10 +2630,12 @@ id action_mode_close_button
 id action_search
 id action_sort_by_date_created
 id action_sort_by_name
+id action_tasksFragment_to_addEditTaskFragment2
 id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addEditTaskFragment2
 id alertTitle
 id aligned
 id all
@@ -2709,6 +2712,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteAllCompletedDialogFragment
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
