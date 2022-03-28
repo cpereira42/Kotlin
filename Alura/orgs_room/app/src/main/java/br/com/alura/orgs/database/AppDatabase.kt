@@ -16,13 +16,16 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun produtoDao() : ProdutoDao
 
     companion object {
+        @Volatile private var db: AppDatabase? = null
         fun instancia(context : Context) : AppDatabase{
-           return Room.databaseBuilder(
+           return db ?: Room.databaseBuilder(
                 context,
                 AppDatabase::class.java,
                 "orgs.db"
-            ).allowMainThreadQueries() // gambiarra o certo é fazer o room em outr thread
-                .build()
+            ).build()
+               .also {
+                   db = it
+               }
         }
     }
 }

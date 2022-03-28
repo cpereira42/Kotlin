@@ -6,12 +6,18 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.lifecycleScope
 import br.com.alura.orgs.R
 import br.com.alura.orgs.database.AppDatabase
 import br.com.alura.orgs.databinding.ActivityDetalhesProdutoBinding
 import br.com.alura.orgs.extensions.formataParaMoedaBrasileira
 import br.com.alura.orgs.extensions.tentaCarregarImagem
 import br.com.alura.orgs.model.Produto
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DetalhesProdutoActivity : AppCompatActivity() {
 
@@ -24,22 +30,32 @@ class DetalhesProdutoActivity : AppCompatActivity() {
         AppDatabase.instancia(this).produtoDao()
     }
 
+    //private val scope = CoroutineScope(Dispatchers.IO)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         tentaCarregarProduto()
-    }
-
-    override fun onResume() {
-        super.onResume()
         buscaProduto()
     }
 
     private fun buscaProduto() {
-        produto = produtoDao.buscaPorId(produtoId)
-        produto?.let {
-            preencheCampos(it)
-        } ?: finish()
+        /*scope.launch {
+            produto = produtoDao.buscaPorId(produtoId)
+            withContext(Dispatchers.Main){
+                produto?.let {
+                    preencheCampos(it)
+                } ?: finish()
+            }
+        }*/
+        lifecycleScope.launch {
+            produtoDao.buscaPorId(produtoId).collect { produtoEncontrado ->
+                produto = produtoEncontrado
+                produto?.let {
+                    preencheCampos(it)
+                } ?: finish()
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -51,9 +67,12 @@ class DetalhesProdutoActivity : AppCompatActivity() {
         //if (::produto.isInitialized){ // verifica se a variavel foi inicializada
             when (item.itemId){
                 R.id.menu_detalhes_produto_remover -> {
-                    produto?.let { produtoDao.remove(it) }
-                    Log.i("Detalhe Produtos", "onOptionsItemSelected : remover")
-                    finish()
+
+                    lifecycleScope.launch {
+                        produto?.let { produtoDao.remove(it) }
+                        Log.i("Detalhe Produtos", "onOptionsItemSelected : remover")
+                        finish()
+                    }
                 }
                 R.id.menu_detalhes_produto_editar -> {
                     Intent(this, FormularioProdutoActivity::class.java).apply {

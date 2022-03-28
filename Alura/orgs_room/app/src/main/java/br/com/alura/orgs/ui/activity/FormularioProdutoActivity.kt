@@ -2,12 +2,18 @@ package br.com.alura.orgs.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import br.com.alura.orgs.database.AppDatabase
 import br.com.alura.orgs.database.dao.ProdutoDao
 import br.com.alura.orgs.databinding.ActivityFormularioProdutoBinding
 import br.com.alura.orgs.extensions.tentaCarregarImagem
 import br.com.alura.orgs.model.Produto
 import br.com.alura.orgs.ui.dialog.FormularioImagemDialog
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.math.BigDecimal
 
 class FormularioProdutoActivity : AppCompatActivity() {
@@ -21,6 +27,8 @@ class FormularioProdutoActivity : AppCompatActivity() {
         val db = AppDatabase.instancia(this)
         db.produtoDao()
     }
+
+    //private val scope = CoroutineScope(Dispatchers.IO)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +44,7 @@ class FormularioProdutoActivity : AppCompatActivity() {
                 }
         }
         tentarCarregarProduto()
+        tentaBuscarProduto()
 
         }
 
@@ -43,15 +52,14 @@ class FormularioProdutoActivity : AppCompatActivity() {
         produtoId = intent.getLongExtra(CHAVE_PRODUTO_ID, 0L)
     }
 
-    override fun onResume() {
-        super.onResume()
-        tentaBuscarProduto()
-    }
-
     private fun tentaBuscarProduto() {
-        produtoDao.buscaPorId(produtoId)?.let {
-            title = "Alterar Produto"
-            preencheCampos(it)
+        lifecycleScope.launch {
+            produtoDao.buscaPorId(produtoId).collect { produto ->
+                produto?.let {
+                    title = "Alterar Produto"
+                    preencheCampos(it)
+                }
+            }
         }
     }
 
@@ -69,14 +77,17 @@ class FormularioProdutoActivity : AppCompatActivity() {
 
         botaoSalvar.setOnClickListener {
             val produtoNovo = criaProduto()
+            lifecycleScope.launch {
+                produtoDao.salva(produtoNovo)
+                finish()
+            }
 
 //            if (produtoId > 0)
 //                produtoDao.altera(produtoNovo)
 //            else
 //                produtoDao.salva(produtoNovo)
 
-            produtoDao.salva(produtoNovo)
-            finish()
+
         }
     }
 
